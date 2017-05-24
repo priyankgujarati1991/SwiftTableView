@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="swiftdemo" customModuleProvider="target">
             <connections>
+                <outlet property="tbl" destination="U9f-kV-zcj" id="hkh-Qa-MoI"/>
                 <outlet property="view" destination="iN0-l3-epB" id="8Mi-q5-z2I"/>
             </connections>
         </placeholder>
@@ -18,7 +19,23 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U9f-kV-zcj">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="pOY-rh-knf"/>
+                        <outlet property="delegate" destination="-1" id="39e-39-ueE"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="U9f-kV-zcj" secondAttribute="bottom" id="O16-h2-0QI"/>
+                <constraint firstItem="U9f-kV-zcj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="WYG-uP-LQM"/>
+                <constraint firstItem="U9f-kV-zcj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Yfb-U9-bOm"/>
+                <constraint firstAttribute="trailing" secondItem="U9f-kV-zcj" secondAttribute="trailing" id="h5y-kV-6C3"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
